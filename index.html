@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kj to Calorie</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="title-text">Kilojoules to Calories</h1>
+      <input type="text" id="kjInput" placeholder="Kilojoules..." />
+      <button id="convert" onclick="convertToCalories()">Convert</button>
+      <output id="calOutput">0</output>
+      <button id="swap-button" onclick="swap()">Swap &harr;</button>
+
+      <button id="modal-trigger" onclick="openModal()">How It Works</button>
+
+      <div class="modal" id="modal">
+        <div class="modal-content">
+          <h3>How It Works</h3>
+          <p>
+            This tool helps you convert between kilojoules and calories.
+            <br />Divide the number of kilojoules by 4.184 to get a rough
+            estimate of the number of calories in a food item.<br />For example,
+            if a food item contains 8368 kilojoules, it would contain
+            approximately 2000 calories.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

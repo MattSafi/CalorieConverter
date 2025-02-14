@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: #2e5077;
+  color: #f6f4f0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 40px;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+#kjInput {
+  padding: 10px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+#calOutput {
+  padding: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: #f6f4f0;
+  color: #2e5077;
+}
+
+#convert {
+  padding: 8px 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: #4da1a9;
+  color: #f6f4f0;
+  cursor: pointer;
+}
+
+#convert:hover {
+  background-color: #f6f4f0;
+  color: #2e5077;
+}
+
+#swap-button {
+  padding: 8px 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: #4da1a9;
+  color: #f6f4f0;
+  cursor: pointer;
+}
+
+#swap-button:hover {
+  background-color: #f6f4f0;
+  color: #2e5077;
+}
+
+#modal-trigger {
+  padding: 8px 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: #4da1a9;
+  color: #f6f4f0;
+  cursor: pointer;
+}
+
+#modal-trigger:hover {
+  background-color: #f6f4f0;
+  color: #2e5077;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background-color: #001f3f;
+  padding: 20px;
+  border: 2px solid #ead8b1;
+  border-radius: 8px;
+  text-align: start;
+  max-width: 400px;
+  width: 90%;
+}
+
+.modal-content h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-decoration: underline;
+}
+
+.modal-content p {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.modal-button {
+  background-color: #3a6d8c;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.modal-button:hover {
+  background-color: #2d4a5a;
+}
