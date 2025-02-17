@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Calorie Converter Container -->
     <div class="container">
       <h1 id="title-text">Kilojoules to Calories</h1>
       <input type="text" id="kjInput" placeholder="Kilojoules..." />
@@ -28,6 +29,14 @@
           </p>
         </div>
       </div>
+    </div>
+
+    <!-- Local Storage -->
+
+    <div class="storage-container" id="storage-container">
+      <h2>Recent Conversions:</h2>
+      <ul id="storage-list"></ul>
+      <button id="clear-storage" onclick="clearStorage()">Clear Recent</button>
     </div>
 
     <script src="main.js"></script>
