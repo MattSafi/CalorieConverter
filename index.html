@@ -10,7 +10,13 @@
     <!-- Calorie Converter Container -->
     <div class="container">
       <h1 id="title-text">Kilojoules to Calories</h1>
-      <input type="text" id="kjInput" placeholder="Kilojoules..." />
+      <input
+        type="number"
+        id="kjInput"
+        placeholder="Kilojoules..."
+        inputmode="decimal"
+      />
+
       <button id="convert" onclick="convertToCalories()">Convert</button>
       <output id="calOutput">0</output>
       <button id="swap-button" onclick="swap()">Swap &harr;</button>

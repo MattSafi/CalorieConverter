@@ -125,10 +125,15 @@ h1 {
 
 .storage-container {
   display: flex;
+  padding: 12px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 40px;
+  border: 4px double #ead8b1;
+  border-radius: 8px;
+  min-width: 385px;
+  min-height: 300px;
 }
 
 #storage-list {
@@ -148,5 +153,7 @@ h1 {
 
   #storage-container {
     margin-bottom: 20px;
+    padding: 0;
+    border: none;
   }
 }
