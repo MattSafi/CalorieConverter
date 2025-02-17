@@ -7,7 +7,33 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <button id="modal-trigger" onclick="openModal()">How It Works</button>
+    <div class="header">
+      <button id="modal-trigger" onclick="openModal()">How It Works</button>
+
+      <div class="modal" id="modal">
+        <div class="modal-content">
+          <h3>Kilojoule to Calorie Converter</h3>
+          <p>
+            This tool helps you convert between kilojoules and calories.
+            <br />Divide the number of kilojoules by 4.184 to get a rough
+            estimate of the number of calories in a food item.
+          </p>
+          <br />
+          <h3>How BMI is Calculated and What It Indicates</h3>
+          <p>
+            Body Mass Index (BMI) is a measure of body fat based on weight and
+            height.<br />Interpreting the BMI Result:<br />Below 18.5 →
+            Underweight<br />18.5 – 24.9 → Normal weight<br />25.0 – 29.9 →
+            Overweight<br />30.0 and above → Obese<br />Note: BMI is a general
+            guideline and does not account for muscle mass, bone density, or
+            body composition. For a more accurate health assessment, consult a
+            healthcare professional.
+          </p>
+        </div>
+      </div>
+
+      <button id="dark-mode" onclick="darkMode()">Dark Mode Toggle</button>
+    </div>
     <!-- Calorie Converter Container -->
     <div class="container">
       <h1 id="title-text">Kilojoules to Calories</h1>
@@ -19,30 +45,36 @@
       />
 
       <button id="convert" onclick="convertToCalories()">Convert</button>
-      <output id="calOutput">0</output>
+      <output id="calOutput">Enter a Value to Convert</output>
       <button id="swap-button" onclick="swap()">Swap &#8597;</button>
-
-      <div class="modal" id="modal">
-        <div class="modal-content">
-          <h3>How It Works</h3>
-          <p>
-            This tool helps you convert between kilojoules and calories.
-            <br />Divide the number of kilojoules by 4.184 to get a rough
-            estimate of the number of calories in a food item.<br />For example,
-            if a food item contains 8368 kilojoules, it would contain
-            approximately 2000 calories.
-          </p>
-        </div>
+      <div class="storage-container" id="storage-container">
+        <h2>Recent Conversions:</h2>
+        <ul id="storage-list"></ul>
+        <button id="clear-storage" onclick="clearStorage()">
+          Clear Recent
+        </button>
       </div>
     </div>
 
-    <!-- Local Storage -->
-
-    <div class="storage-container" id="storage-container">
-      <h2>Recent Conversions:</h2>
-      <ul id="storage-list"></ul>
-      <button id="clear-storage" onclick="clearStorage()">Clear Recent</button>
+    <div class="BMIContainer">
+      <h1>BMI Calculator</h1>
+      <input
+        type="number"
+        id="weightInput"
+        placeholder="Weight in kg..."
+        inputmode="decimal"
+      />
+      <input
+        type="number"
+        id="heightInput"
+        placeholder="Height in cm..."
+        inputmode="decimal"
+      />
+      <button id="calculate" onclick="calculateBMI()">Calculate</button>
+      <div id="bmiOutput">Enter values to calculate BMI</div>
     </div>
+
+    <!-- Local Storage -->
 
     <script src="main.js"></script>
   </body>

@@ -41,7 +41,7 @@ function swap() {
   }
 
   inputField.value = "";
-  document.getElementById("calOutput").innerHTML = "0";
+  document.getElementById("calOutput").innerHTML = "Enter a Value to Convert";
 }
 
 function saveConversion(inputValue, result, inputType) {
@@ -81,6 +81,20 @@ function clearStorage() {
   displayConversions();
 }
 
+function calculateBMI() {
+  let weight = parseFloat(document.getElementById("weightInput").value);
+  let height = parseFloat(document.getElementById("heightInput").value) / 100;
+  let result = document.getElementById("bmiOutput");
+
+  if (isNaN(weight) || isNaN(height) || height <= 0 || weight <= 0) {
+    result.textContent = "Please enter valid values!";
+    return;
+  }
+
+  let bmi = (weight / (height * height)).toFixed(2);
+  result.textContent = `Your BMI is ${bmi}`;
+}
+
 // Modal functionality
 function openModal() {
   document.getElementById("modal").style.display = "flex"; // Show modal
@@ -112,6 +126,12 @@ function handleScroll() {
 }
 
 window.addEventListener("scroll", handleScroll);
+
+function darkMode() {
+  let body = document.body;
+  let currentClass = body.className;
+  body.className = currentClass === "darkMode" ? "" : "darkMode";
+}
 
 // Load recent conversions when the page loads
 window.onload = function () {

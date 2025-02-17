@@ -6,21 +6,28 @@
 
 body {
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  justify-content: center;
+  gap: 30px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   background-color: #2e5077;
   color: #f6f4f0;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: start;
-  height: 100vh;
-  gap: 40px;
+  align-items: center;
+  padding: 20px;
+  margin-top: 50px;
+  gap: 30px;
 }
 
 h1 {
@@ -29,7 +36,9 @@ h1 {
   text-align: center;
 }
 
-#kjInput {
+#kjInput,
+#weightInput,
+#heightInput {
   padding: 10px;
   font-size: 1.2rem;
   border: none;
@@ -37,7 +46,8 @@ h1 {
   outline: none;
 }
 
-#calOutput {
+#calOutput,
+#bmiOutput {
   padding: 8px;
   font-size: 1rem;
   font-weight: 600;
@@ -50,7 +60,8 @@ h1 {
 
 #convert,
 #swap-button,
-#clear-storage {
+#clear-storage,
+#calculate {
   padding: 8px 16px;
   font-size: 1rem;
   font-weight: 600;
@@ -64,9 +75,15 @@ h1 {
   cursor: pointer;
 }
 
+#swap-button,
+#clear-storage {
+  margin-bottom: 60px;
+}
+
 #convert:hover,
 #swap-button:hover,
-#clear-storage:hover {
+#clear-storage:hover,
+#calculate:hover {
   background-color: #f6f4f0;
   color: #2e5077;
 }
@@ -89,9 +106,33 @@ h1 {
   transition: opacity 0.3s ease; /* Smooth transition for opacity */
 }
 
-#modal-trigger:hover {
+#modal-trigger:hover,
+#dark-mode:hover {
   background-color: #f6f4f0;
   color: #2e5077;
+}
+
+#dark-mode {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 25px 25px 0 0;
+  padding: 8px 16px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  max-width: 200px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: #4da1a9;
+  color: #f6f4f0;
+  cursor: pointer;
+  transition: opacity 0.3s ease; /* Smooth transition for opacity */
+}
+
+.darkMode {
+  background-color: #001f3f;
+  color: aliceblue;
 }
 
 .modal {
@@ -113,7 +154,6 @@ h1 {
   border: 2px solid #ead8b1;
   border-radius: 8px;
   text-align: start;
-  max-width: 400px;
   width: 90%;
 }
 
@@ -150,7 +190,7 @@ h1 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 40px;
+  gap: 30px;
   min-width: 385px;
 }
 
@@ -160,6 +200,18 @@ h1 {
   font-size: 1.1rem;
 }
 
+/* BMI Calculator */
+
+.BMIContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+  margin-top: 55px;
+  padding: 20px;
+}
+
 @media screen and (max-width: 768px) {
   body {
     flex-direction: column;
@@ -167,6 +219,10 @@ h1 {
 
   .container {
     align-items: center;
+  }
+
+  #dark-mode {
+    display: none;
   }
 
   #storage-container {
