@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <button id="modal-trigger" onclick="openModal()">How It Works</button>
     <!-- Calorie Converter Container -->
     <div class="container">
       <h1 id="title-text">Kilojoules to Calories</h1>
@@ -19,9 +20,7 @@
 
       <button id="convert" onclick="convertToCalories()">Convert</button>
       <output id="calOutput">0</output>
-      <button id="swap-button" onclick="swap()">Swap &harr;</button>
-
-      <button id="modal-trigger" onclick="openModal()">How It Works</button>
+      <button id="swap-button" onclick="swap()">Swap &#8597;</button>
 
       <div class="modal" id="modal">
         <div class="modal-content">

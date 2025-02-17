@@ -98,7 +98,23 @@ window.onclick = function (event) {
   }
 };
 
+function handleScroll() {
+  if (window.innerWidth <= 768) {
+    const modalButton = document.getElementById("modal-trigger");
+    const scrollPosition = window.scrollY;
+
+    if (scrollPosition > 50) {
+      modalButton.style.opacity = "0";
+    } else {
+      modalButton.style.opacity = "1";
+    }
+  }
+}
+
+window.addEventListener("scroll", handleScroll);
+
 // Load recent conversions when the page loads
 window.onload = function () {
   displayConversions();
+  handleScroll();
 };
