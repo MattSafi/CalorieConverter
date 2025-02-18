@@ -36,6 +36,32 @@ h1 {
   text-align: center;
 }
 
+.kjContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  border: 2px solid #f6f4f0;
+  border-radius: 8px;
+  padding: 30px 8px 8px 8px;
+  width: 450px;
+}
+
+/* BMI Calculator */
+
+.BMIContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+  width: 450px;
+  margin: 20px 0 50px 0;
+  padding: 20px;
+  border: 2px solid #f6f4f0;
+  border-radius: 8px;
+}
+
 #kjInput,
 #weightInput,
 #heightInput {
@@ -77,7 +103,7 @@ h1 {
 
 #swap-button,
 #clear-storage {
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 
 #convert:hover,
@@ -200,18 +226,6 @@ h1 {
   font-size: 1.1rem;
 }
 
-/* BMI Calculator */
-
-.BMIContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 30px;
-  margin-top: 55px;
-  padding: 20px;
-}
-
 @media screen and (max-width: 768px) {
   body {
     flex-direction: column;
@@ -219,6 +233,14 @@ h1 {
 
   .container {
     align-items: center;
+  }
+
+  .kjContainer {
+    border: none;
+  }
+
+  .BMIContainer {
+    border: none;
   }
 
   #dark-mode {
@@ -229,5 +251,9 @@ h1 {
     margin-bottom: 20px;
     padding: 0;
     border: none;
+  }
+
+  .modal-content {
+    width: 80%;
   }
 }

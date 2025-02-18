@@ -119,8 +119,10 @@ function handleScroll() {
 
     if (scrollPosition > 50) {
       modalButton.style.opacity = "0";
+      modalButton.style.pointerEvents = "none";
     } else {
       modalButton.style.opacity = "1";
+      modalButton.style.pointerEvents = "auto";
     }
   }
 }
